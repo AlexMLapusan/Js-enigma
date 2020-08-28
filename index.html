@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Enigma machine</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class = "main-container">
+            <h1>The enigma machine</h1>
+            <p>Instructions: pick 3 initial offsets using the arrows (remember them), there are 26 possible positions for each <strong>rotor</strong>.
+                Every change in the initial settings of the machine will result in a different coding being used.
+                When you press a letter on the keyboard its coded counterpart will light up on the screen, write it down.
+                Now after you finished writing, if you want to decode your message set the rotors to their initial values and type the text you want to decode.</p>
+            <section class = "rotors" >
+                <div class = "fast rotor" speed = "fast">
+                    <div class = "increment"> &#x25B2</div>
+                    <div class = "value"></div>
+                    <div class = "decrement">&#x25BC</div>
+                </div>
+                <div class = "medium rotor" speed = "medium">
+                    <div class = "increment">&#x25B2</div>
+                    <div class = "value"></div>
+                    <div class = "decrement">&#x25BC</div>
+                </div>
+                <div class = "slow rotor" speed = "slow">
+                    <div class = "increment">&#x25B2</div>
+                    <div class = "value"></div>
+                    <div class = "decrement">&#x25BC</div>
+                </div>
+            </section>
+
+            <section class = "bulbs-container">
+                <div class = "first-row">
+                    <div class = "bulb q">Q</div>
+                    <div class = "bulb w">W</div>
+                    <div class = "bulb e">E</div>
+                    <div class = "bulb r">R</div>
+                    <div class = "bulb t">T</div>
+                    <div class = "bulb y">Y</div>
+                    <div class = "bulb u">U</div>
+                    <div class = "bulb i">I</div>
+                    <div class = "bulb o">O</div>
+                    <div class = "bulb p">P</div>
+                </div>
+                <div class = "second-row">
+                    <span></span>
+                    <div class = "bulb a">A</div>
+                    <div class = "bulb s">S</div>
+                    <div class = "bulb d">D</div>
+                    <div class = "bulb f">F</div>
+                    <div class = "bulb g">G</div>
+                    <div class = "bulb h">H</div>
+                    <div class = "bulb j">J</div>
+                    <div class = "bulb k">K</div>
+                    <div class = "bulb l">L</div>
+                    <span></span>
+                </div>
+                <div class = "third-row">
+                    <span></span>
+                    <div class = "bulb z">Z</div>
+                    <div class = "bulb x">X</div>
+                    <div class = "bulb c">C</div>
+                    <div class = "bulb v">V</div>
+                    <div class = "bulb b">B</div>
+                    <div class = "bulb n">N</div>
+                    <div class = "bulb m">M</div>
+                    <span></span>
+                </div>
+
+            </section>
+        </div>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
