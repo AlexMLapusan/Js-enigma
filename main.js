@@ -38,8 +38,6 @@
             let output;
             for(let i=0; i<26; i++){
                 if(letter === this.links[i].output){
-                    // let outputIndex = (i + this.offset) % 26;
-                    // output = this.links[outputIndex].input;
                     let outputIndex = (ALPHABET.indexOf(this.links[i].input) - this.offset + 26 )% 26;
                     output = ALPHABET[outputIndex];
                 }
@@ -173,7 +171,8 @@
                 // console.log(pressedKey);
                 // console.log($("." + pressedKey));
                 litUpKey = scrambler.scramble(pressedKey);
-                $("." + litUpKey).css("background-color", "red");
+                $("." + litUpKey).css("background", " linear-gradient(135deg, #fceabb 0%,#f8b500 40%,#f8b500 41%,#fccd4d 43%,#fbdf93 100%)");
+                $("." + litUpKey).css("color", "#000");
                 keyPressedFlag = true;
                 currentlyPressed = event.code;
 
@@ -188,7 +187,8 @@
         console.log(currentlyPressed);
         console.log(event.code);
         if(currentlyPressed === event.code){
-            $("." + litUpKey).css("background-color", "white");
+            $("." + litUpKey).css("background", "linear-gradient(135deg, #000000 0%,#0a0a0a 11%,#0a0a0a 21%,#4e4e4e 33%,#383838 37%,#383838 37%,#1b1b1b 43%,#1b1b1b 43%,#000000 100%)");
+            $("." + litUpKey).css("color", "#DDD");
             keyPressedFlag = false;
             currentlyPressed = null;
         }
@@ -226,6 +226,13 @@
                 break;
         }
         updateDisplayedRotors();
+    });
+
+    $("img").mouseenter(()=>{
+        $(".info").show();
+    });
+    $("img").mouseleave(()=>{
+        $(".info").hide();
     });
 
 })(jQuery)

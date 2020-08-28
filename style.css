@@ -52,9 +52,17 @@ table {
 /* Actual style */
 
 .main-container{
+    background-image: url("https://www.101computing.net/enigma/images/metallic-texture.jpg");
+
+    border-left: 1vmin solid #DDD;
+    border-right: 1vmin solid #DDD;
+    border-radius: 10px;
+
+    grid-column: 2;
+
     display: grid;
-    grid-template-rows: 100px 10vh calc(40vh - 100px)  calc(50vh - 100px) 100px;
-    grid-template-columns: 5vw 90vw 5vw;
+    grid-template-rows: 10vmin 10vmin calc(40vmin - 10vmin)  calc(50vmin - 10vmin) 10vmin;
+    grid-template-columns:  1fr 100vmin 1fr;
 }
 
 .bulbs-container{
@@ -67,9 +75,7 @@ table {
 
 .first-row, .second-row, .third-row{
     display: grid;
-    /*justify-content: space-evenly;*/
-    /*align-content: center;*/
-    /*align-items: center;*/
+    display: grid;
 }
 
 .first-row{
@@ -97,7 +103,7 @@ table {
     place-self: center;
 
     display: flex;
-    border: 1px solid black;
+    border: 1px solid #DDD;;
 
     height: 50%;
     width: 50%;
@@ -110,6 +116,12 @@ table {
 
     user-select: none;
 
+    background: linear-gradient(135deg, #000000 0%,#0a0a0a 11%,#0a0a0a 21%,#4e4e4e 33%,#383838 37%,#383838 37%,#1b1b1b 43%,#1b1b1b 43%,#000000 100%);
+
+    color: #DDD;
+    font-weight: bold;
+
+    font-size: calc((50vmin - 10vmin)/12);
 }
 
 .rotors{
@@ -118,8 +130,37 @@ table {
 
     place-self: center;
 
+    /*display: flex;*/
+
+    /*width: auto;*/
+    /*height: 100%;*/
+
+    display: grid;
+    grid-template-rows: repeat(3, calc((40vmin - 10vmin)/3));
+    grid-template-columns: repeat(3, calc((40vmin - 10vmin)/3));
+
+}
+
+.fast, .slow, .medium{
     display: flex;
 
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fast{
+    grid-column: 1;
+    grid-row: 1/4;
+}
+
+.medium{
+    grid-column: 2;
+    grid-row: 1/4;
+}
+
+.slow{
+    grid-column: 3;
+    grid-row: 1/4;
 }
 
 .rotors div{
@@ -128,43 +169,62 @@ table {
 }
 
 .increment, .decrement, .value{
-    width: 50px;
-    height: 50px;
 
-    margin: 5px;
+    font-size: calc((40vmin - 10vmin)/3 - 20px);
 
-    display : flex;
-
-    align-items: center;
-    justify-content: center;
-
-    cursor: default;
-
-    font-size: 50px;
     font-weight: bold;
 
+    cursor: default;
     user-select: none;
 }
 
+.value{
+    color: #DDD;
+}
+
 .increment, .decrement{
-    background: #AAA;
+    background: #DDD;
 
     cursor: pointer;
 }
 
-h1{
-    grid-row: 1;
-    grid-column: 2;
-    font-size: 50px;
+body{
+    background-image: radial-gradient(#000, #444);
 
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
 }
-p{
+
+h1{
+    font-family: monospace;
+
     grid-row: 2;
     grid-column: 2;
+    font-size: 7vmin;
+
+    color: #DDD;
+    text-align: center;
 }
 
+img{
+    width: 10vmin;
+    height: 10vmin;
 
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.info {
+    background: #000;
+    color: #DDD;
+
+    position: fixed;
+    right: 0;
+    top: 10vmin;
+
+    width: 20vw;
+}
 
 
 
